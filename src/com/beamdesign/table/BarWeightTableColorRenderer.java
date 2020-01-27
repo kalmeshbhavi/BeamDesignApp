@@ -21,7 +21,7 @@ public class BarWeightTableColorRenderer implements TableCellRenderer {
             c.setBackground(Constants.ODD_ROW_COLOR);
         }
 
-        if (column == Constants.CHANGE_IDX
+       /* if (column == Constants.CHANGE_IDX
                 || column == Constants.PERCENTAGE_CHANGE_IDX) {
             Object priceChangeObj = table.getModel().getValueAt(row,
                     Constants.CHANGE_IDX);
@@ -35,7 +35,7 @@ public class BarWeightTableColorRenderer implements TableCellRenderer {
             c.setForeground(color);
         } else {
             c.setForeground(Constants.DEFAULT_FOREGROUND_COLOR);
-        }
+        }*/
 
         return c;
     }

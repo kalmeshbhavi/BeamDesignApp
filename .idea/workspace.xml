@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9af0e2a-5d22-4c66-b864-3f1e25a19011" name="Default Changelist" comment="" />
+    <list default="true" id="b9af0e2a-5d22-4c66-b864-3f1e25a19011" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/beamdesign/component/columndesign/ResultPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/beamdesign/component/columndesign/listener/ColumnAreaCalculationPaneListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/beamdesign/component/columndesign/model/ColumnAreaTableModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/beamdesign/component/columndesign/model/JTableModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/beamdesign/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/beamdesign/model/Column.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/BeamDesignUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/BeamDesignUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/component/BarAndWeightPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/component/BarAndWeightPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/component/BeamDesignTabbedComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/component/BeamDesignTabbedComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/component/ColumnAreaCalculationPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/component/ColumnCalculationPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/component/ColumnDesignPane 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/component/ColumnDesignPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/component/FooterDesignPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/component/MassForceDetailsPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/component/MassForceDetailsPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/table/BarWeightTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/table/BarWeightTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/table/BarWeightTableColorRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeamDesignApp/com/beamdesign/table/BarWeightTableColorRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beamdesign/BeamDesignUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beamdesign/BeamDesignUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beamdesign/component/BarAndWeightPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beamdesign/component/BarAndWeightPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beamdesign/component/BeamDesignTabbedComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beamdesign/component/BeamDesignTabbedComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beamdesign/component/ColumnAreaCalculationPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beamdesign/component/columndesign/ColumnAreaCalculationTablePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beamdesign/component/ColumnCalculationPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beamdesign/component/columndesign/ColumnCalculationPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beamdesign/component/ColumnDesignPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beamdesign/component/columndesign/ColumnDesignPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beamdesign/component/FooterDesignPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beamdesign/component/footerdesign/FooterDesignPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beamdesign/component/MassForceDetailsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beamdesign/component/MassForceDetailsPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beamdesign/table/BarWeightTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beamdesign/table/BarWeightTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/beamdesign/table/BarWeightTableColorRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/beamdesign/table/BarWeightTableColorRenderer.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +46,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1WsD4bYTS74ZRX4IIvCwSIhzM70" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,6 +58,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="BeamDesignUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -43,6 +90,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -53,33 +112,55 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579929219134</updated>
+      <workItem from="1580082969981" duration="15360000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1579934577806">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="504" y="-863" key="#com.intellij.ide.util.MemberChooser" timestamp="1580109728444">
+      <screen x="-207" y="-1057" width="1920" height="1057" />
     </state>
+    <state x="504" y="-863" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/-207.-1057.1920.1057@-207.-1057.1920.1057" timestamp="1580109728444" />
     <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1579934577806" />
-    <state width="1398" height="230" key="GridCell.Tab.0.bottom" timestamp="1579960990481">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="246" y="-944" key="CommitChangelistDialog2" timestamp="1580110063695">
+      <screen x="-207" y="-1057" width="1920" height="1057" />
     </state>
+    <state x="246" y="-944" key="CommitChangelistDialog2/0.23.1440.877/-207.-1057.1920.1057@-207.-1057.1920.1057" timestamp="1580110063695" />
+    <state width="1878" height="290" key="GridCell.Tab.0.bottom" timestamp="1580109736519">
+      <screen x="-207" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1440.877/-207.-1057.1920.1057@-207.-1057.1920.1057" timestamp="1580109736519" />
     <state width="1398" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1579960990481" />
-    <state width="1398" height="230" key="GridCell.Tab.0.center" timestamp="1579960990480">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1878" height="290" key="GridCell.Tab.0.center" timestamp="1580109736518">
+      <screen x="-207" y="-1057" width="1920" height="1057" />
     </state>
+    <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1440.877/-207.-1057.1920.1057@-207.-1057.1920.1057" timestamp="1580109736518" />
     <state width="1398" height="230" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1579960990480" />
-    <state width="1398" height="230" key="GridCell.Tab.0.left" timestamp="1579960990479">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1878" height="290" key="GridCell.Tab.0.left" timestamp="1580109736518">
+      <screen x="-207" y="-1057" width="1920" height="1057" />
     </state>
+    <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1440.877/-207.-1057.1920.1057@-207.-1057.1920.1057" timestamp="1580109736518" />
     <state width="1398" height="230" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1579960990479" />
-    <state width="1398" height="230" key="GridCell.Tab.0.right" timestamp="1579960990480">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1878" height="290" key="GridCell.Tab.0.right" timestamp="1580109736519">
+      <screen x="-207" y="-1057" width="1920" height="1057" />
     </state>
+    <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1440.877/-207.-1057.1920.1057@-207.-1057.1920.1057" timestamp="1580109736519" />
     <state width="1398" height="230" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1579960990480" />
-    <state x="397" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1579929224604">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="262" y="-890" key="SettingsEditor" timestamp="1580082948171">
+      <screen x="-207" y="-1057" width="1920" height="1057" />
     </state>
+    <state x="262" y="-890" key="SettingsEditor/0.23.1440.877/-207.-1057.1920.1057@-207.-1057.1920.1057" timestamp="1580082948171" />
+    <state x="322" y="-730" key="com.intellij.ide.util.TipDialog" timestamp="1580083166591">
+      <screen x="-207" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="322" y="-730" key="com.intellij.ide.util.TipDialog/0.23.1440.877/-207.-1057.1920.1057@-207.-1057.1920.1057" timestamp="1580083166591" />
     <state x="397" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1579929224604" />
+    <state x="418" y="-822" key="search.everywhere.popup" timestamp="1580086793725">
+      <screen x="-207" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="418" y="-822" key="search.everywhere.popup/0.23.1440.877/-207.-1057.1920.1057@-207.-1057.1920.1057" timestamp="1580086793725" />
   </component>
 </project>

@@ -1,4 +1,6 @@
-package com.beamdesign.component;
+package com.beamdesign.component.columndesign;
+
+import com.beamdesign.component.BarAndWeightPane;
 
 import javax.swing.*;
 import java.awt.*;

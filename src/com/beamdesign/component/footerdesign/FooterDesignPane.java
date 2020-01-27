@@ -1,4 +1,4 @@
-package com.beamdesign.component;
+package com.beamdesign.component.footerdesign;
 
 import javax.swing.*;
 
