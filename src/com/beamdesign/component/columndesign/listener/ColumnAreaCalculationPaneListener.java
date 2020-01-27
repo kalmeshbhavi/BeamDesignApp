@@ -6,7 +6,7 @@ import javax.swing.event.TableModelListener;
 public class ColumnAreaCalculationPaneListener implements TableModelListener {
 
     public ColumnAreaCalculationPaneListener() {
-
+        System.out.println("listener added");
     }
 
 

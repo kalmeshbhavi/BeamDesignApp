@@ -35,6 +35,14 @@ public class ColumnAreaTableModel extends AbstractTableModel {
     }
 
     @Override
+    public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
+        if (columnIndex != 2 && columnIndex != 3) {
+            fireTableCellUpdated(rowIndex, columnIndex);
+        }
+        super.setValueAt(aValue, rowIndex, columnIndex);
+    }
+
+    @Override
     public Object getValueAt(int row, int col) {
         Column column = columns.get(row);
 
