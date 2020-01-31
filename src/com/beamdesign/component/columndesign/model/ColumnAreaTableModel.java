@@ -11,9 +11,7 @@ public class ColumnAreaTableModel extends AbstractTableModel {
 
     private String[] colNames = {"Length", "Width", "Area", "Unit"};
 
-    public ColumnAreaTableModel() {
-
-    }
+    public ColumnAreaTableModel() {}
 
     public void setData(List<Column> columns) {
         this.columns = columns;
@@ -26,7 +24,7 @@ public class ColumnAreaTableModel extends AbstractTableModel {
 
     @Override
     public int getRowCount() {
-        return this.columns.size();
+        return 6;
     }
 
     @Override
@@ -36,16 +34,23 @@ public class ColumnAreaTableModel extends AbstractTableModel {
 
     @Override
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
-        if (columnIndex != 2 && columnIndex != 3) {
-            fireTableCellUpdated(rowIndex, columnIndex);
+        Column column = columns.get(rowIndex);
+        switch (columnIndex) {
+            case 0:
+                column.setLength(Integer.valueOf((String)aValue));
+                break;
+            case 1:
+                column.setWidth(Integer.valueOf((String)aValue));
+                break;
+            default:
         }
-        super.setValueAt(aValue, rowIndex, columnIndex);
+        column.setArea(column.getLength()*column.getWidth());
+        fireTableDataChanged();
     }
 
     @Override
     public Object getValueAt(int row, int col) {
         Column column = columns.get(row);
-
         switch (col) {
             case 0:
                 return column.getLength();
@@ -63,5 +68,16 @@ public class ColumnAreaTableModel extends AbstractTableModel {
     @Override
     public boolean isCellEditable(int rowIndex, int columnIndex) {
         return columnIndex != 2 && columnIndex != 3;
+    }
+
+    @Override
+    public String toString() {
+        return "ColumnAreaTableModel{" +
+                "columns=" + columns +
+                '}';
+    }
+
+    public List<Column> getColumns() {
+        return this.columns;
     }
 }

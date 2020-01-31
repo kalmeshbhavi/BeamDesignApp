@@ -12,7 +12,7 @@ public class BeamDesignUI extends JFrame {
     private Controller controller;
 
     public BeamDesignUI() {
-        setLayout(new GridLayout(2, 1));
+        setLayout(new GridLayout(1, 1));
 
         controller = new Controller();
 

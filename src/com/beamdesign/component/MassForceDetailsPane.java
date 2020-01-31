@@ -18,18 +18,9 @@ public class MassForceDetailsPane extends JPanel {
 
     public MassForceDetailsPane() {
         BarWeightTableColorRenderer colorRenderer = new BarWeightTableColorRenderer();
-
-
-        JTable table = new JTable(TABLE_DATA, TABLE_HEADER) {
-            @Override
-            public boolean isCellEditable(int row, int column) {
-                return false;
-            }
-        };
-
-
+        JTable table = new JTable(TABLE_DATA, TABLE_HEADER);
+        table.setEnabled(false);
         table.setDefaultRenderer(Object.class, colorRenderer);
-
         add(new JScrollPane(table));
     }
 }
