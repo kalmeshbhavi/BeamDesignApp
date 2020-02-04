@@ -4,17 +4,14 @@ import com.beamdesign.component.columndesign.model.ColumnAreaTableModel;
 import com.beamdesign.component.columndesign.model.Result;
 import com.beamdesign.controller.Controller;
 import com.beamdesign.model.Column;
-import com.beamdesign.model.MassForceDetails;
 import com.beamdesign.table.BarWeightTableColorRenderer;
 
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
 
 public class ColumnCalculationPane extends JPanel {
 
@@ -23,15 +20,16 @@ public class ColumnCalculationPane extends JPanel {
     private Controller controller;
     private int selectedIndex;
 
-    private static final Map<Integer, List<Integer>> massMapp= new HashMap(){{
+    private static final Map<Integer, List<Integer>> massMap = Collections.unmodifiableMap(new HashMap() {{
         put(0, Arrays.asList(4, 130));
         put(1, Arrays.asList(5, 190));
         put(2, Arrays.asList(6, 190));
         put(3, Arrays.asList(8, 190));
-    }};
+    }});
 
     public ColumnCalculationPane() {
-//        super(new GridLayout(3,0));
+
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         controller = new Controller();
 
         BarWeightTableColorRenderer colorRenderer = new BarWeightTableColorRenderer();
@@ -39,14 +37,18 @@ public class ColumnCalculationPane extends JPanel {
         tableModel = new ColumnAreaTableModel();
         tableModel.setData(controller.getAreaColumnDetails());
         table = new JTable(tableModel);
-
+        table.setRowHeight(30);
         table.setCellSelectionEnabled(true);
-
-        table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         table.getTableHeader().setReorderingAllowed(false);
         table.setDefaultRenderer(Object.class, colorRenderer);
+        table.getTableHeader().setPreferredSize(new Dimension(150,32));
+        table.getTableHeader().setFont(new Font(Font.DIALOG_INPUT, Font.PLAIN, 15));
 
-        add(new JScrollPane(table));
+        JScrollPane columnAreaPanel = new JScrollPane(table);
+        columnAreaPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(),
+                "WORKING STRESS METHOD -  Design of Column P =6cc.Ac + 6sc.Asc",
+                TitledBorder.CENTER, TitledBorder.TOP, new Font(Font.DIALOG_INPUT, Font.PLAIN, 15), Color.RED));
+        add(columnAreaPanel);
 
         List<Column> columns = tableModel.getColumns();
 
@@ -59,13 +61,19 @@ public class ColumnCalculationPane extends JPanel {
 
         massForceDetailsJList.setSelectedIndex(0);
         selectedIndex = massForceDetailsJList.getSelectedIndex();
+        massForceDetailsJList.setOpaque(true);
+        massForceDetailsJList.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 15));
+
+        Dimension maximumSize = massForceDetailsJList.getMaximumSize();
+        maximumSize.height = 20;
+        massForceDetailsJList.setMaximumSize(maximumSize);
+        massForceDetailsJList.setBorder(BorderFactory.createEtchedBorder());
 
         add(massForceDetailsJList);
         massForceDetailsJList.addItemListener(e -> {
             if (e.getStateChange() == ItemEvent.SELECTED) {
                 String item = (String) e.getItem();
                 int i = Arrays.asList(massForceList).indexOf(item);
-                System.out.println(i);
                 selectedIndex = i;
                 Result res = getResultPanelValues(tableModel.getColumns(), selectedIndex);
                 resultPanel.setPuEditorTextValue(resultPanel, res);
@@ -85,8 +93,8 @@ public class ColumnCalculationPane extends JPanel {
         Integer firstColArea = columns.get(0).getArea();
         int remainingColumnSum = columns.stream().skip(1).mapToInt(Column::getArea).sum();
 
-        Integer puMassValue = massMapp.get(index).get(0) * (firstColArea - remainingColumnSum);
-        Integer puForceValue = massMapp.get(index).get(1) * remainingColumnSum;
+        Integer puMassValue = massMap.get(index).get(0) * (firstColArea - remainingColumnSum);
+        Integer puForceValue = massMap.get(index).get(1) * remainingColumnSum;
         double steelValue = (remainingColumnSum * 100) / firstColArea;
         Integer puNValueDouble = (puMassValue + puForceValue + 1000 - 1) / 1000;
 

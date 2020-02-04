@@ -15,6 +15,8 @@ public class BarWeightTableColorRenderer implements TableCellRenderer {
         Component c = DEFAULT_RENDERER.getTableCellRendererComponent(table,
                 value, isSelected, hasFocus, row, column);
         // Apply zebra style on table rows
+        c.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 15));
+
         if (row % 2 == 0) {
             c.setBackground(Constants.EVEN_ROW_COLOR);
         } else {

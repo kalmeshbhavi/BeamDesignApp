@@ -23,6 +23,5 @@ public class MassForceDetailsPane extends JPanel {
         table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         table.getTableHeader().setReorderingAllowed(false);
         add(new JScrollPane(table));
-
     }
 }
