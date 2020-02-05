@@ -96,7 +96,8 @@ public class ColumnCalculationPane extends JPanel {
         Integer puMassValue = massMap.get(index).get(0) * (firstColArea - remainingColumnSum);
         Integer puForceValue = massMap.get(index).get(1) * remainingColumnSum;
         double steelValue = (remainingColumnSum * 100) / firstColArea;
-        Integer puNValueDouble = (puMassValue + puForceValue + 1000 - 1) / 1000;
+        float puMassAndForceSum = (float) (puMassValue + puForceValue)/1000;
+        int puNValueDouble = Math.round(puMassAndForceSum);
 
         Result result = new Result();
         result.setPuValue(puMassValue + puForceValue);

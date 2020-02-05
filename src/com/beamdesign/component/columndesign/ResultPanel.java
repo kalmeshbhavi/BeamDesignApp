@@ -53,7 +53,7 @@ public class ResultPanel extends JPanel {
         puKNewtron.setForeground(Color.RED);
 
         steelLabel = new JLabel("Steel (%) :");
-        steelLabel.setPreferredSize(new Dimension(100,30));
+        steelLabel.setPreferredSize(new Dimension(150,30));
         steelLabel.setHorizontalTextPosition(SwingConstants.LEFT);
         steelLabel.setFont(new Font(Font.DIALOG_INPUT, Font.PLAIN, 16));
 

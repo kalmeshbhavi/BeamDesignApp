@@ -67,7 +67,12 @@ public class ColumnAreaTableModel extends AbstractTableModel {
 
     @Override
     public boolean isCellEditable(int rowIndex, int columnIndex) {
-        return columnIndex != 2 && columnIndex != 3;
+
+        if (columnIndex == 0) {
+            return true;
+        }
+
+        return columnIndex == 1 && rowIndex < 1;
     }
 
     @Override
