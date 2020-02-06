@@ -4,7 +4,7 @@ public class Result {
 
     private Integer puValue;
     private Integer puKNValue;
-    private Double steelPerc;
+    private String steelPerc;
 
     public Integer getPuValue() {
         return puValue;
@@ -14,11 +14,11 @@ public class Result {
         this.puValue = puValue;
     }
 
-    public Double getSteelPerc() {
+    public String getSteelPerc() {
         return steelPerc;
     }
 
-    public void setSteelPerc(Double steelPerc) {
+    public void setSteelPerc(String steelPerc) {
         this.steelPerc = steelPerc;
     }
 

@@ -10,10 +10,14 @@ import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.ItemEvent;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.*;
 import java.util.List;
 
 public class ColumnCalculationPane extends JPanel {
+
+    private static DecimalFormat df2 = new DecimalFormat("#.##");
 
     private JTable table;
     private ColumnAreaTableModel tableModel;
@@ -93,15 +97,18 @@ public class ColumnCalculationPane extends JPanel {
         Integer firstColArea = columns.get(0).getArea();
         int remainingColumnSum = columns.stream().skip(1).mapToInt(Column::getArea).sum();
 
+
         Integer puMassValue = massMap.get(index).get(0) * (firstColArea - remainingColumnSum);
         Integer puForceValue = massMap.get(index).get(1) * remainingColumnSum;
-        double steelValue = (remainingColumnSum * 100) / firstColArea;
+        double steelValue = (double) (remainingColumnSum * 100) / firstColArea;
+        System.out.println(steelValue);
         float puMassAndForceSum = (float) (puMassValue + puForceValue)/1000;
         int puNValueDouble = Math.round(puMassAndForceSum);
 
         Result result = new Result();
         result.setPuValue(puMassValue + puForceValue);
-        result.setSteelPerc(steelValue);
+
+        result.setSteelPerc(df2.format((double) (remainingColumnSum * 100) / firstColArea));
         result.setPuKNValue(puNValueDouble);
 
         return result;

@@ -10,6 +10,8 @@ public class ResultPanel extends JPanel {
 
     private JLabel pu;
     private JLabel puN;
+    private JLabel puNValueUnit;
+    private JLabel puKNValueUnit;
     private JTextField puNewton;
     private JTextField puKNewtron;
     private JLabel steelLabel;
@@ -23,23 +25,28 @@ public class ResultPanel extends JPanel {
 
     public ResultPanel() {
 
-//        SpringLayout layout = new SpringLayout();
-
+        setLayout(new FlowLayout());
         pu = new JLabel("PU:");
-        pu.setPreferredSize(new Dimension(50,30));
+        pu.setPreferredSize(new Dimension(30, 30));
         pu.setHorizontalTextPosition(SwingConstants.LEFT);
         pu.setFont(new Font(Font.DIALOG_INPUT, Font.PLAIN, 16));
 
         puNewton = new JTextField();
         puNewton.setEditable(false);
-        puNewton.setPreferredSize(new Dimension(100,30));
+        puNewton.setPreferredSize(new Dimension(100, 30));
         puNewton.setHorizontalAlignment(SwingConstants.CENTER);
         puNewton.setFont(new Font(Font.DIALOG_INPUT, Font.PLAIN, 16));
         puNewton.setForeground(Color.RED);
         pu.setLabelFor(puKNewtron);
 
-        puN = new JLabel("PU /N:");
-        puN.setPreferredSize(new Dimension(50,30));
+        puNValueUnit = new JLabel("N");
+        puNValueUnit.setPreferredSize(new Dimension(20, 30));
+        puNValueUnit.setHorizontalTextPosition(SwingConstants.LEFT);
+        puNValueUnit.setFont(new Font(Font.DIALOG_INPUT, Font.PLAIN, 10));
+        puNValueUnit.setForeground(Color.BLUE);
+
+        puN = new JLabel("PU:");
+        puN.setPreferredSize(new Dimension(30, 30));
         puN.setHorizontalTextPosition(SwingConstants.LEFT);
         puN.setFont(new Font(Font.DIALOG_INPUT, Font.PLAIN, 16));
 
@@ -47,20 +54,26 @@ public class ResultPanel extends JPanel {
         puKNewtron = new JTextField();
         puKNewtron.setEditable(false);
         puN.setLabelFor(puKNewtron);
-        puKNewtron.setPreferredSize(new Dimension(100,30));
+        puKNewtron.setPreferredSize(new Dimension(100, 30));
         puKNewtron.setHorizontalAlignment(SwingConstants.CENTER);
         puKNewtron.setFont(new Font(Font.DIALOG_INPUT, Font.PLAIN, 16));
         puKNewtron.setForeground(Color.RED);
 
-        steelLabel = new JLabel("Steel (%) :");
-        steelLabel.setPreferredSize(new Dimension(150,30));
-        steelLabel.setHorizontalTextPosition(SwingConstants.LEFT);
+        puKNValueUnit = new JLabel("KN");
+        puKNValueUnit.setPreferredSize(new Dimension(30, 30));
+        puKNValueUnit.setHorizontalTextPosition(SwingConstants.LEFT);
+        puKNValueUnit.setFont(new Font(Font.DIALOG_INPUT, Font.PLAIN, 10));
+        puKNValueUnit.setForeground(Color.BLUE);
+
+        steelLabel = new JLabel("Steel (%)");
+        steelLabel.setPreferredSize(new Dimension(80, 30));
+        steelLabel.setHorizontalTextPosition(SwingConstants.RIGHT);
         steelLabel.setFont(new Font(Font.DIALOG_INPUT, Font.PLAIN, 16));
 
         steelPerc = new JTextField();
         steelPerc.setFont(new Font(Font.DIALOG_INPUT, Font.PLAIN, 16));
         steelPerc.setEditable(false);
-        steelPerc.setPreferredSize(new Dimension(100,30));
+        steelPerc.setPreferredSize(new Dimension(100, 30));
         steelPerc.setHorizontalAlignment(SwingConstants.CENTER);
         steelPerc.setForeground(Color.RED);
         steelLabel.setLabelFor(steelPerc);
@@ -73,8 +86,10 @@ public class ResultPanel extends JPanel {
 
         add(pu);
         add(puNewton);
+        add(puNValueUnit);
         add(puN);
         add((puKNewtron));
+        add(puKNValueUnit);
         add(steelLabel);
         add(steelPerc);
 //        add(panel);
